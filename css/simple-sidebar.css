@@ -87,6 +87,43 @@
  	padding: 0px;
 }
 
+
+
+
+.navbar{
+  margin-bottom: 0px;
+}
+.navbar-default{
+  color: white;
+  background-color: #14749b;
+}
+.navbar-default .navbar-nav>li>a,.navbar-default .navbar-brand,.nav-tabs>li>a {
+  color: white;
+}
+.n3{
+  width: 100%;
+}
+#sidebar-wrapper{
+	z-index:1001;
+	border-left: 2px solid black;
+}
+.n3>li>a:hover {
+  color: wheat;
+  background-color: inherit;
+}
+#my-tab-content{
+	margin-right: 250px;
+}
+.just-for-toggle{
+	margin-right: 0px;
+}
+.row{
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 10px 10px;
+}
+
+
 @media(min-width:768px) {
     #wrapper {
         
@@ -98,6 +135,7 @@
 
     #sidebar-wrapper {
         width: 250px;
+		margin-top: 50px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -113,3 +151,4 @@
         margin-right: 0;
     }
 }
+

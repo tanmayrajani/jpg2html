@@ -7,27 +7,6 @@
     <title>Bootstrap 101 Template</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/simple-sidebar.css" rel="stylesheet">
-	  
-	  <style>
-		  .navbar{
-			  margin-bottom: 0px;
-		  }
-		  .navbar-default{
-			  color: white;
-			  background-color: #14749b;
-		  }
-		  .navbar-default .navbar-nav>li>a,.navbar-default .navbar-brand,.nav-tabs>li>a {
-			  color: white;
-		  }
-		  .n3{
-			  z-index: 1001;
-			  width: 100%;
-		  }
-		  .n3>li>a:hover {
-			  color: wheat;
-			  background-color: inherit;
-		  }
-	  </style>
   </head>
   <body>
 	  <nav class="navbar n2 navbar-default">
@@ -66,10 +45,10 @@
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-			aowrbvsndjlbnalwerjnvlkaesrnbkjsefdnb<br>
-			aowrbvsndjlbnalwerjnvlkaesrnbkjsefdnb<br>
-			aowrbvsndjlbnalwerjnvlkaesrnbkjsefdnb<br>
-			aowrbvsndjlbnalwerjnvlkaesrnbkjsefdnb<br>
+			aowrbvsndjlbnalwerjnvlkjsefdnb<br>
+			aowrbvsndjlbnalwerjnvlksrnbkjsefdnb<br>
+			aowrbvsndjlbnalwerjnvlkjsefdnb<br>
+			aowrbvsndjlbnalwerjnvlkrnbkjsefdnb<br>
             <ul class="sidebar-nav">
                 
                 
@@ -83,7 +62,7 @@
 				
 
 				
-				<ul id="tabs" class="nav nav-tabs navbar-inverse n3" data-tabs="tabs">
+		<ul id="tabs" class="nav nav-tabs navbar-inverse n3" data-tabs="tabs">
 			<li><a href="#practice" data-toggle="tab">Practice</a></li>
 			<li><a href="#calender" data-toggle="tab">Calender</a></li>
 			<li><a href="#tasks" data-toggle="tab">Tasks</a></li>
@@ -95,10 +74,13 @@
 			<li><a href="#docunments" data-toggle="tab">Documents</a></li>
 			<li><a href="#communications" data-toggle="tab">Communications</a></li>
 			<li><a href="#reports" data-toggle="tab">Reports</a></li>
-			<li class="pull-right"><a href="#menu-toggle" id="menu-toggle">Sidebar ></a></li>
+			<li class="pull-right">
+				<a href="#menu-toggle" id="menu-toggle">
+					Sidebar <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+				</a></li>
 		</ul>
 	  	<div id="my-tab-content" class="tab-content">
-			<div class="tab-pane active" id="practice">
+			<div class="tab-pane" id="practice">
 				<h1>Practice</h1>
 			</div>
 			<div class="tab-pane" id="calender">
@@ -107,8 +89,19 @@
 			<div class="tab-pane" id="tasks">
 				<h1>Tasks</h1>
 			</div>
-			<div class="tab-pane" id="matters">
-				<h1>Matters</h1>
+			<div class="tab-pane active" id="matters">
+<!--		/////////////////////////////////////..Main Inner Shit begins..////////////////////////////////////////////////		-->
+				<div class="row">
+					<span class="pull-left">Matters</span>
+					<button type="button" class="btn btn-default pull-right btn-success">NEW</button>
+  					<button type="button" class="btn btn-disabled pull-right">EXPORT</button>
+				</div>
+				
+				
+				
+				
+				
+<!--		////////////////////////////////////////////////////////////////////////////////////////////////		-->
 			</div>
 			<div class="tab-pane" id="contacts">
 				<h1>Contacts</h1>
@@ -127,17 +120,7 @@
 			</div>
 	  	</div>
 				
-
-                
-                        
-                
-				
-				
-				
-				
-				
-				
-				
+			
 				
 				
 				
@@ -156,23 +139,6 @@
 	  
 	  
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
 		
 	  
 	  
@@ -182,6 +148,7 @@
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+		$("#my-tab-content").toggleClass("just-for-toggle");
     });
     </script>
   </body>

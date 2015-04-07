@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/simple-sidebar.css" rel="stylesheet">
+	  
 	  <style>
 		  .navbar{
 			  margin-bottom: 0px;
@@ -16,6 +18,14 @@
 		  }
 		  .navbar-default .navbar-nav>li>a,.navbar-default .navbar-brand,.nav-tabs>li>a {
 			  color: white;
+		  }
+		  .n3{
+			  z-index: 1001;
+			  width: 100%;
+		  }
+		  .n3>li>a:hover {
+			  color: wheat;
+			  background-color: inherit;
 		  }
 	  </style>
   </head>
@@ -48,7 +58,32 @@
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 	  </nav>
-		<ul id="tabs" class="nav nav-tabs navbar-inverse" data-tabs="tabs">
+	  
+
+	  
+	  
+	  <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+			aowrbvsndjlbnalwerjnvlkaesrnbkjsefdnb<br>
+			aowrbvsndjlbnalwerjnvlkaesrnbkjsefdnb<br>
+			aowrbvsndjlbnalwerjnvlkaesrnbkjsefdnb<br>
+			aowrbvsndjlbnalwerjnvlkaesrnbkjsefdnb<br>
+            <ul class="sidebar-nav">
+                
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container">
+				
+
+				
+				<ul id="tabs" class="nav nav-tabs navbar-inverse n3" data-tabs="tabs">
 			<li><a href="#practice" data-toggle="tab">Practice</a></li>
 			<li><a href="#calender" data-toggle="tab">Calender</a></li>
 			<li><a href="#tasks" data-toggle="tab">Tasks</a></li>
@@ -60,6 +95,7 @@
 			<li><a href="#docunments" data-toggle="tab">Documents</a></li>
 			<li><a href="#communications" data-toggle="tab">Communications</a></li>
 			<li><a href="#reports" data-toggle="tab">Reports</a></li>
+			<li class="pull-right"><a href="#menu-toggle" id="menu-toggle">Sidebar ></a></li>
 		</ul>
 	  	<div id="my-tab-content" class="tab-content">
 			<div class="tab-pane active" id="practice">
@@ -89,17 +125,64 @@
 			<div class="tab-pane" id="reports">
 				<h1>Reports</h1>
 			</div>
-			<div class="tab-pane" id="documents">
-				<h1>Blue</h1>
-				<p>blue blue blue blue blue</p>
-			</div><div class="tab-pane" id="documents">
-				<h1>Blue</h1>
-				<p>blue blue blue blue blue</p>
-			</div>
-    	</div>
+	  	</div>
+				
+
+                
+                        
+                
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+                
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+		
 	  
 	  
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
   </body>
 </html>

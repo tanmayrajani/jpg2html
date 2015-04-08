@@ -7,6 +7,7 @@
     <title>Bootstrap 101 Template</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/simple-sidebar.css" rel="stylesheet">
+	<link href="css/jquery-ui.min.css" rel="stylesheet">
   </head>
   <body>
 	  <nav class="navbar n2 navbar-default">
@@ -45,14 +46,24 @@
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-			aowrbvsndjlbnalwerjnvlkjsefdnb<br>
-			aowrbvsndjlbnalwerjnvlksrnbkjsefdnb<br>
-			aowrbvsndjlbnalwerjnvlkjsefdnb<br>
-			aowrbvsndjlbnalwerjnvlkrnbkjsefdnb<br>
-            <ul class="sidebar-nav">
-                
-                
-            </ul>
+			<div class="row r2">
+				<div class="for-float">
+				Get the app<br>
+				<button type="button" class="btn btn-default btn-sm">
+				  Android
+				</button>
+				<button type="button" class="btn btn-default btn-sm">
+				  iPhone
+				</button></div>
+				<img class="thumbnail img1" src="img.png">
+			</div>
+            <div id="datepicker"></div>
+            <div class="row"><b>AGENDA</b><br/>No agenda items.</div><br/>
+            <div class="row"><b>TIMEKEEPING</b><br/>No timer running.</div>
+            <div class="row"><b>RECENT</b><br/>
+            	<span class="glyphicon glyphicon-briefcase" aria-hidden="true">&nbsp;</span><a href="#">00002-Bash</a><br/>
+            	<span class="glyphicon glyphicon-briefcase" aria-hidden="true">&nbsp;</span><a href="#"></span>00001-Rose</a>
+            </div>
         </div>
         <!-- /#sidebar-wrapper -->
 
@@ -62,7 +73,7 @@
 				
 
 				
-		<ul id="tabs" class="nav nav-tabs navbar-inverse n3" data-tabs="tabs">
+		<ul id="tabs" class="nav nav-tabs nav-s navbar-inverse n3" data-tabs="tabs">
 			<li><a href="#practice" data-toggle="tab">Practice</a></li>
 			<li><a href="#calender" data-toggle="tab">Calender</a></li>
 			<li><a href="#tasks" data-toggle="tab">Tasks</a></li>
@@ -71,13 +82,14 @@
 			<li><a href="#activites" data-toggle="tab">Activities</a></li>
 			<li><a href="#bills" data-toggle="tab">Bills</a></li>
 			<li><a href="#accounts" data-toggle="tab">Accounts</a></li>
-			<li><a href="#docunments" data-toggle="tab">Documents</a></li>
+			<li><a href="#documents" data-toggle="tab">Documents</a></li>
 			<li><a href="#communications" data-toggle="tab">Communications</a></li>
 			<li><a href="#reports" data-toggle="tab">Reports</a></li>
 			<li class="pull-right">
 				<a href="#menu-toggle" id="menu-toggle">
 					Sidebar <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-				</a></li>
+				</a>
+			</li>
 		</ul>
 	  	<div id="my-tab-content" class="tab-content">
 			<div class="tab-pane" id="practice">
@@ -92,12 +104,107 @@
 			<div class="tab-pane active" id="matters">
 <!--		/////////////////////////////////////..Main Inner Shit begins..////////////////////////////////////////////////		-->
 				<div class="row">
-					<span class="pull-left">Matters</span>
+					<span class="pull-left span2">Matters</span>
 					<button type="button" class="btn btn-default pull-right btn-success">NEW</button>
   					<button type="button" class="btn btn-disabled pull-right">EXPORT</button>
 				</div>
 				
-				
+				<div>
+					<ul id="tabs" class="nav nav-tabs n4" data-tabs="tabs">
+				        <li class="active"><a href="#open" data-toggle="tab">Open</a></li>
+				        <li><a href="#closed" data-toggle="tab">Closed</a></li>
+				        <li><a href="#pending" data-toggle="tab">Pending</a></li>
+				        <li><a href="#all" data-toggle="tab">All</a></li>
+				    </ul>
+				    <div id="my-tab-content" class="tab-content tbc2">
+				        <div class="tab-pane active" id="open">
+				            <!-- innermost shit here //////////////////////////////////////////////////////  -->
+				            <table class="table t1">
+							    <caption>
+							      	
+									    <label>
+									      <input type="checkbox"> Select All
+									    </label>
+									
+									<div class="pull-right">
+										<div class="btn-group">
+										  <button type="button" class="btn btn-default noborder dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+										    Filter <span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu dropdown-menu-right" role="menu">
+										    <li><a href="#">By date</a></li>
+										    <li><a href="#">By name</a></li>
+										    <li><a href="#">Something else</a></li>
+										  </ul>
+										</div>
+									</div>	
+								</caption>
+						      <thead>
+						        <tr>
+						          <th></th>
+						          <th>Display Number</th>
+						          <th>Client</th>
+						          <th>Practice Area</th>
+						          <th>Open Date</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <th scope="row"><input type="checkbox"></th>
+						          <td><u>00001-Rose</u></td>
+						          <td><u>Axl Rose</u><br>Copyright</td>
+						          <td>Corporate</td>
+						          <td>03/15/2015</td>
+						        </tr>
+						        <tr>
+						          <td class="padd-td" colspan=5>
+						          	<span class="padd-right pull-left"><a href="#">View</a></span>
+						          	<span class="padd-right pull-left"><a href="#">Edit</a></span>
+						          	<span class="padd-right pull-left"><a href="#">Add Task</a></span>
+						          	<span class="padd-right pull-left"><a href="#">Clio Contact</a></span>
+						          	<span class="padd-right pull-left"><a href="#">Quick Bill</a></span>
+						          	<span class="padd-right pull-left"><a href="#">Delete</a></span>
+						          </td>
+						        </tr>
+						        <tr>
+						          <th scope="row"><input type="checkbox"></th>
+						          <td><u>00002-Bash</u></td>
+						          <td><u>Sebastian Bash</u><br>Charged with indecency</td>
+						          <td>Civil Litigation</td>
+						          <td>03/15/2015</td>
+						        </tr>
+						        <tr>
+						          <td class="padd-td" colspan=5>
+						          	<span class="padd-right pull-left"><a href="#">View</a></span>
+						          	<span class="padd-right pull-left"><a href="#">Edit</a></span>
+						          	<span class="padd-right pull-left"><a href="#">Add Task</a></span>
+						          	<span class="padd-right pull-left"><a href="#">Clio Contact</a></span>
+						          	<span class="padd-right pull-left"><a href="#">Quick Bill</a></span>
+						          	<span class="padd-right pull-left"><a href="#">Delete</a></span>
+						          </td>
+						        </tr>
+						      </tbody>
+						    </table>
+
+
+
+
+
+
+				            <!-- innermost shit here //////////////////////////////////////////////////////  -->
+				        </div>
+				        <div class="tab-pane" id="closed">
+				            <h1>Closed</h1>
+				        </div>
+				        <div class="tab-pane" id="pending">
+				            <h1>Pending</h1>
+				        </div>
+				        <div class="tab-pane" id="all">
+				            <h1>All</h1>
+				        </div>
+				    </div>
+
+				</div>
 				
 				
 				
@@ -105,6 +212,12 @@
 			</div>
 			<div class="tab-pane" id="contacts">
 				<h1>Contacts</h1>
+			</div>
+			<div class="tab-pane" id="accounts">
+				<h1>Accounts</h1>
+			</div>
+			<div class="tab-pane" id="documents">
+				<h1>Documents</h1>
 			</div>
 			<div class="tab-pane" id="activites">
 				<h1>Activities</h1>
@@ -123,9 +236,6 @@
 			
 				
 				
-				
-				
-				
                 
             </div>
         </div>
@@ -137,18 +247,17 @@
 	  
 	  
 	  
-	  
-	  
-		
-	  
-	  
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script>
+	$(function() {
+	    $( "#datepicker" ).datepicker();
+	});
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
-		$("#my-tab-content").toggleClass("just-for-toggle");
+		$(".tab-content").toggleClass("just-for-toggle");
     });
     </script>
   </body>
